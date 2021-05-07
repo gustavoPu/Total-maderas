@@ -1,0 +1,480 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul,ol{
+	list-style: none;
+}
+
+body{
+	font-family: Open sans;
+	font-family: 16px;
+}
+
+.contenedor {
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+/* ==== ==== HEADER ==== ==== */
+
+header {
+	padding: 50px 0;
+	background: url('../img/maderanegra.png');
+}
+
+header .contenedor-header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .imagen {
+	width: 150px;
+	margin-left: 60px;
+}
+
+header .imagen img {
+	width: 100%;
+}
+
+header nav {
+	margin-right: 60px; 
+}
+
+header nav .menu li {
+	display: inline-block;
+}
+
+header nav .menu li a {
+	text-decoration: none;
+	font-family: Open sans;
+	color: #fff;
+	display: block;
+	margin: 0 20px;
+}
+
+header nav .menu li a:hover{
+	color: #996633;
+}
+
+/* ==== ==== SLIDER ==== ==== */
+
+.slideshow{
+	width: 100%;
+	position: relative;
+	background: url('../img/maderanegra.png');
+}
+
+.slider li, ul{
+	width: 100%;
+}
+
+.slider li{
+	overflow: hidden;
+}
+
+.slider li img{
+	width: 100%;
+	border-radius: 40%;
+}
+
+.slider .caption{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding: 15px 50px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+	color: #fff;
+	z-index: 1;
+}
+
+.slider .caption h1{
+	font-size: 50px;
+}
+
+.slider .caption p{
+	margin-top: 10px;
+	font-size: 20px;
+	color: #fff;
+}
+
+.pagination{
+	background: url('../img/maderanegra.png') repeat-x;
+	position: absolute;
+	top: 99%;
+	width: 100%;
+	padding-top: 20px;
+
+	display: flex;
+	justify-content: center;
+}
+
+.pagination li{
+	font-size: 20px;
+	margin: 2px 5px;
+	color: #858585;
+	cursor: pointer;
+}
+
+.left, .right{
+	position: absolute;
+	top: 0;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+
+	color: #fff;
+	font-size: 35px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.left{
+	left: 10px;
+}
+
+.right{
+	right: 10px;
+}
+
+/* ==== ==== MAIN ==== ==== */
+
+.contenedor .menu-productos {
+	background: url('../img/maderanegra.png') repeat;
+	width: 100%;
+	margin-top: 20px;
+	padding: 20px 0 30px 0;
+	text-align: center;
+}
+
+.contenedor .menu-productos nav {
+	width: 30%;
+	margin: 30px auto;
+	margin-bottom: -20px;
+	padding: 20px 0;
+	background: rgba(255,255,255, .2);
+}
+
+.contenedor .menu-productos ul li {
+	display: inline-block;
+
+}
+
+.contenedor .menu-productos ul li a {
+	padding: 40px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.contenedor .menu-productos ul li a:hover {
+	color: #996633;
+}
+
+.main .trabajos {
+	background: url('../img/madera.png') repeat;
+}
+
+.main .trabajos .contenedor {
+	width: 100%;
+	margin: auto;
+}
+
+.main .trabajos .titulo {
+	margin-top: 20px;
+	font-size: 2.125em;
+	line-height: 34px;
+	margin-bottom: 60px;
+	font-family: OpenSans-Light;
+	color: #171616;
+	text-align: center;	
+}
+
+.main .trabajos .contenedor .contenedor-trabajos {
+	margin: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo {
+	max-width: 1200px;
+	margin: 50px auto;
+}
+
+
+.main .trabajos a {
+	display: inline-block;
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo {
+	width: 300px;
+	margin: 40px 30px;
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo:hover figure {
+	-webkit-transform: perspective(600px) rotateY(180deg);
+	-moz-transform: perspective(600px) rotateY(180deg);
+	-ms-transform: perspective(600px) rotateY(180deg);
+	-o-transform: perspective(600px) rotateY(180deg);
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo:hover figure img {
+	filter: blur(2px);
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo a figure {
+	border-radius: 5px;
+	width: 300px;
+	margin: 0;
+	position: relative;
+	transition: all ease .5s;
+	transform-style: preserve-3d;
+	transform: perspective(600px) rotateY(0deg);
+	-webkit-transform: perspective(600px) rotateY(0deg);
+	-moz-transform: perspective(600px) rotateY(0deg);
+	-ms-transform: perspective(600px) rotateY(0deg);
+	-o-transform: perspective(600px) rotateY(0deg);
+	-webkit-box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.31);
+	-moz-box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.31);
+	box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.31);
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo figure .frontal,
+.main .trabajos .contenedor .contenedor-trabajos .trabajo figure .trasera {
+	width: 100%;
+	border-radius: 5px;
+	transition: all ease .5s;
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo figure .frontal {
+	display: block;
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo figure .trasera {
+	height: 100%;
+	background: url('../img/maderanegra.png') repeat;
+	position: absolute;
+	top: 0;
+	padding: 20px;
+	color: #fff;
+	transform: perspective(600px) rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo figure .trasera .titulo {
+	color: #fff;
+	font-weight: normal;
+	font-size: 24px;
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo figure .trasera hr {
+	height: 2px;
+	background: #fff;
+	border: none;
+	margin-bottom: 15px;
+	opacity: .5;
+}
+
+.main .trabajos .contenedor .contenedor-trabajos .trabajo figure .trasera p {
+	font-size: 14px;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+/* ==== ==== FOOTER ==== ==== */
+
+footer {
+	background: url('../img/madera.png');
+}
+
+footer .contacto {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;	
+	align-items: center;
+}
+
+footer .contacto .direccion {
+	margin: 0 auto;
+}
+
+footer .contacto .direccion .telefono, .correo {
+	margin: 40px 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;	
+	align-items: center;	
+}
+
+footer .contacto .direccion .fas, p {
+	display: inline-block;
+	color: rgba(0, 0, 0, .7);
+	color: #171616;
+}
+
+footer .contacto .direccion .fas {
+	font-size: 2.5rem;
+	margin: 10px;
+}
+
+footer .contacto .direccion p {
+	font-size: 1.25rem;
+	margin: 10px;
+}
+
+footer .contacto .contenedor {
+	width: 40%;
+	padding: 60px 0;
+}
+
+footer .contacto .titulo {
+	font-size: 2.125em;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-family: OpenSans-Light;
+	color: #171616;
+	text-align: center;		
+}
+
+footer .contacto .formulario {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="tel"],
+footer .contacto .formulario input[type="email"],
+footer .contacto .formulario textarea {
+	border: 2px solid #cecece;
+	border-radius: 5px;
+	padding: 15px 20px;
+	font-size: 1.25em;
+	color: #a4a4a4;
+}
+
+footer .contacto .formulario input[type="text"]:focus,
+footer .contacto .formulario input[type="tel"]:focus,
+footer .contacto .formulario input[type="email"]:focus,
+footer .contacto .formulario textarea:focus {
+	border: 2px solid #3895ea;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="tel"] {
+	width: 49%;
+	margin-bottom: 15px;
+}
+
+footer .contacto .formulario input[type="email"] {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+footer .contacto .formulario textarea {
+	width: 100%;
+	height: 100px;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 175px;
+	max-height: 175px;
+	margin-bottom: 15px;
+}
+
+footer .contacto .formulario .boton {
+	margin: auto;
+	background: transparent;
+	color: #171616;
+	border: 2px solid #171616;
+	border-radius: 3px;
+	padding: 15px 40px;
+}
+
+footer .contacto .formulario .boton:hover {
+	background: #171616;
+	border: 2px solid #171616;
+	color: #fff;
+	cursor: pointer;
+}
+
+.redes-sociales {
+  background: url('../img/maderanegra.png');
+  padding: 60px 0;
+}
+.redes-sociales .contenedor {
+  display: flex;
+  justify-content: center;
+}
+.redes-sociales .contenedor a {
+  color: #fff;
+  text-align: center;
+  width: 100px;
+  display: block;
+  padding: 15px 0;
+  border-radius: 3px;
+  font-size: 1.875em;
+  margin: 0 20px;
+}
+.redes-sociales .twitter:hover {
+  background: #1da1f2;
+}
+.redes-sociales .facebook:hover {
+  background: #3b5998;
+}
+.redes-sociales .instagram:hover {
+  background: #9c2f59;
+}
+.redes-sociales .youtube:hover {
+  background: #bb0000;
+}
+.redes-sociales .mercadolibre:hover {
+	background: #b3b300;
+}
+
+/* ==== ==== MEDIAQUERIES ==== ==== */
+
+@media screen and (max-width: 600px){
+	.slider .caption p{
+		display: none;
+	}
+
+	.slider .caption h1{
+		font-size: 35px;
+	}
+
+	.left, .right{
+		font-size: 30px;
+	}
+
+	.slider li img{
+		width: 600px;
+	}
+
+	.pagination{
+		display: none;
+	}
+}
